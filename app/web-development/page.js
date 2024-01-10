@@ -1,48 +1,45 @@
 import Layout from "@/components/Layout";
-import CtaStripStacked from "@/components/blocks/ctas/CtaStripStacked";
 import HeadingWithIconCards from "@/components/blocks/features/HeadingWithIconCards";
 import TwoColumnContentWithImage from "@/components/blocks/features/TwoColumnContentWithImage";
 import SpotlightHero from "@/components/blocks/heroes/SpotlightHero";
 import TestimonialBanner from "@/components/blocks/testimonials/TestimonialBanner";
 
-const Home = () => {
+const WebDevelopment = () => {
   return (
     <>
       <Layout>
-        <SpotlightHero className="b__size-lg" />
+        <SpotlightHero
+          heading={`People and search engines <br class="u__show-after-992" />love fast sites`}
+          description={`Ready for the next generation of websites? We can build a superfast <br class="u__show-after-992" />and secure website for you, increase conversions, improve SEO ranking <br class="u__show-after-992" />and attract more users.`}
+          className="b__size-lg"
+          centered={false}
+        />
         <HeadingWithIconCards
           headingSize="h2"
-          className="b__size-md u__border-top pb-4 pb-lg-5"
+          className="b__size-md u__border-top"
         />
-        <TestimonialBanner className="b__size-md pt-0" />
         <TwoColumnContentWithImage
           enableCardBorder
           className="b__size-md u__border-top"
-          cardBackgroundColor="var(--t-cp-base-white)"
           isCard
         />
         <TwoColumnContentWithImage
           isCard
           enableCardBorder
-          sectionOverflowHidden={false}
-          cardBackgroundColor="var(--t-cp-base-white)"
-          invertedColumns
+          cardBackgroundColor="var(--t-secondary-light-background-color)"
           className="b__size-md pt-0"
-          leftRipple
         />
         <TwoColumnContentWithImage
           isCard
           enableCardBorder
-          cardBackgroundColor="var(--t-cp-base-white)"
+          cardBackgroundColor="var(--t-tertiary-light-background-color)"
           className="b__size-md pt-0"
-          rightRipple
-          sectionOverflowHidden={false}
         />
+        <TestimonialBanner className="b__size-md pt-0" />
         <HeadingWithIconCards
           columnClassName="col-md-6 col-lg-4 mb-4"
           className="b__size-md u__border-top"
           headingSize="h2"
-          heading="Technologies We Use"
           cardClassName="u__bg-white c__icon-card--with-border"
           cards={[
             ...Array(3).fill({
@@ -53,10 +50,9 @@ const Home = () => {
             }),
           ]}
         />
-        <CtaStripStacked className="b__size-md pt-0" />
       </Layout>
     </>
   );
 };
 
-export default Home;
+export default WebDevelopment;
