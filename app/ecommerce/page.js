@@ -1,14 +1,18 @@
-import Layout from "@/components/Layout";
 import CtaBanner from "@/components/blocks/ctas/CtaBanner";
 import HeadingWithIconCards from "@/components/blocks/features/HeadingWithIconCards";
 import TwoColumnContentWithImage from "@/components/blocks/features/TwoColumnContentWithImage";
 import SpotlightHero from "@/components/blocks/heroes/SpotlightHero";
 import TestimonialBanner from "@/components/blocks/testimonials/TestimonialBanner";
 
-const Home = () => {
+const Ecommerce = () => {
   return (
     <>
-      <SpotlightHero className="b__size-lg" />
+      <SpotlightHero
+        heading={`People and search engines <br class="u__show-after-992" />love fast sites`}
+        description={`Ready for the next generation of websites? We can build a superfast <br class="u__show-after-992" />and secure website for you, increase conversions, improve SEO ranking <br class="u__show-after-992" />and attract more users.`}
+        className="b__size-lg"
+        centered={false}
+      />
       <HeadingWithIconCards
         headingSize="h2"
         className="b__size-md u__border-top pb-4 pb-lg-5"
@@ -151,4 +155,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Ecommerce;

@@ -49,7 +49,7 @@
 
     &--inverted {
       background-color: var(--t-cp-base-white);
-      color: var(--t-heading-color-primary);
+      color: var(--t-primary-heading-color);
       border: none;
       &:hover {
         background-color: var(--t-cp-base-gray-100);
@@ -233,13 +233,14 @@
     }
     &__icon-wrapper {
       margin-bottom: 3rem;
-      img,
       svg {
         width: 42px;
         height: 42px;
       }
       img {
         object-fit: contain;
+        width: 100px;
+        height: 42px;
       }
     }
   }

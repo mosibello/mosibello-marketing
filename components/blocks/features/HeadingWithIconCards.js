@@ -16,12 +16,13 @@ const HeadingWithIconCards = ({
   paddingBottom,
   className = `b__size-md`,
   // Content
-  heading = `How Mosibello supports your business`,
+  heading = `How Mosibello Supports Your Business`,
   headingSize = `h4`,
   description = `We use the power of Jamstack and server-side rendering to ship
   value to our customers.`,
   cards = [
     ...Array(4).fill({
+      iconImage: null,
       iconJSX: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6" > <path fillRule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clipRule="evenodd" /> </svg>`,
       heading: `Sample Heading`,
       description: `All of our web app development projects have a dedicated development team that continues to work on the product throughout its lifetime to ensure it’s always functioning properly.`,
@@ -65,10 +66,12 @@ const HeadingWithIconCards = ({
           <div className="container mt-4 pt-3">
             <div className="row">
               {cards.map((elem, index) => {
-                const { iconJSX, heading, description, button } = elem;
+                const { iconImage, iconJSX, heading, description, button } =
+                  elem;
                 return (
                   <div key={index} className={columnClassName}>
                     <IconCard
+                      iconImage={iconImage}
                       iconJSX={iconJSX}
                       heading={heading}
                       description={description}

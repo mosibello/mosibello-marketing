@@ -36,7 +36,7 @@ const Header = () => {
                     );
                   })}
                 </ul>
-                <Button title={`Get a Free Quote`} destination={`/blog`} />
+                <Button title={`Get a Free Quote`} destination={`/contact`} />
               </nav>
             </div>
             <div className="b__site-header__website-page-header__hamburger-wrapper">
@@ -79,7 +79,7 @@ const Header = () => {
                   <Button
                     className="text-center"
                     title={`Get a Free Quote`}
-                    destination={`/blog`}
+                    destination={`/contact`}
                   />
                 </nav>
               </div>

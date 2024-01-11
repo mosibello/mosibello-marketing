@@ -20,6 +20,7 @@ const TwoColumnContentWithImage = ({
   className = `b__size-md`,
   // Content
   title = `Section Title`,
+  titleColor = `u__branding-color--secondary`,
   heading = `Powerful Section Heading to Insure Readability`,
   content = `<p> <span> Gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </span> </p> <p> <span> Gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </span> </p>`,
   button = {
@@ -30,6 +31,8 @@ const TwoColumnContentWithImage = ({
     src: `https://23219927.fs1.hubspotusercontent-na1.net/hubfs/23219927/side-hustle-2.jpeg`,
     alt: ``,
   },
+  imageObjectFit = `cover`,
+  imageScale = `1.0`,
   invertedColumns,
   leftRipple = false,
   rightRipple = false,
@@ -48,16 +51,33 @@ const TwoColumnContentWithImage = ({
           ${enableCardBorder && `border: 2px solid var(--t-border-color);`}
         }
 
-        .c__image-wrapper {
-          min-height: 250px;
-        }
-
         @media (min-width: 768px) {
           .b__feature__two-column-content-with-image__content-wrapper--is-card {
             padding: 5rem;
           }
           .c__image-wrapper {
             min-height: 350px;
+          }
+        }
+
+        @media (min-width: 992px) {
+          .b__feature__two-column-content-with-image__content-wrapper--is-card {
+            padding: 3rem;
+          }
+          .c__image-wrapper {
+            transform: scale(${imageScale});
+          }
+        }
+
+        @media (min-width: 1300px) {
+          .b__feature__two-column-content-with-image__content-wrapper--is-card {
+            padding: 4rem;
+          }
+        }
+
+        @media (min-width: 1400px) {
+          .b__feature__two-column-content-with-image__content-wrapper--is-card {
+            padding: 5rem;
           }
         }
       `}</style>
@@ -116,14 +136,18 @@ const TwoColumnContentWithImage = ({
                 >
                   {title && (
                     <div className="mb-3">
-                      <span className="u__subtitle u__heading-color--primary u__f-700 u__letter-spacing--tight">
+                      <span
+                        className={`u__subtitle u__f-700 u__letter-spacing--tight ${
+                          titleColor ? titleColor : ``
+                        }`}
+                      >
                         {title}
                       </span>
                     </div>
                   )}
                   {heading && (
                     <div className="mb-3">
-                      <Heading headingTag="h2" className="u__h2 mb-0">
+                      <Heading headingTag="h2" className="u__h1 mb-0">
                         {heading}
                       </Heading>
                     </div>
@@ -154,13 +178,13 @@ const TwoColumnContentWithImage = ({
                   <div className="b__feature__two-column-content-with-image__image-wrapper c__image-wrapper">
                     <Image
                       placeholder={`empty`}
-                      className="u__br-8"
+                      className="u__br-28 c__image"
                       blurDataURL={""}
                       src={image.src}
                       alt={image.alt}
                       title={image.alt}
                       fill={true}
-                      style={{ objectFit: "cover" }}
+                      style={{ objectFit: imageObjectFit }}
                     />
                   </div>
                 </div>

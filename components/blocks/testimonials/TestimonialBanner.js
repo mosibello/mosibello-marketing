@@ -18,6 +18,7 @@ const TestimonialBanner = ({
   heading = `Gubergren, no sea takimata sanctus est lorem ipsum dolor<br class="u__show-after-992"/> sit amet. Lorem ipsum dolor sit amet`,
   name = `John Doe`,
   title = `Product Designer @ Elvis`,
+  bannerBackgroundHex = null,
 }) => {
   return (
     <>
@@ -32,7 +33,12 @@ const TestimonialBanner = ({
         backgroundHex={backgroundHex}
       >
         <div className="container">
-          <div className="c__testimonial-banner">
+          <div
+            className={`c__testimonial-banner`}
+            style={{
+              background: bannerBackgroundHex && bannerBackgroundHex,
+            }}
+          >
             <div className="c__testimonial-banner__wrapper text-center">
               {heading && (
                 <div className="mb-4 mb-md-5">

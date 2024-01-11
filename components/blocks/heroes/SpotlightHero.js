@@ -18,8 +18,8 @@ const SpotlightHero = ({
   paddingBottom,
   className = `b__size-md`,
   // Content
-  heading = `We craft modern websites <br className="u__show-after-992" />
-  and cutting-edge apps.`,
+  heading = `We Craft Modern Websites <br className="u__show-after-992" />
+  and Cutting-Edge Apps.`,
   headingSize = `d0`,
   description = `Unlock your business's full potential with high-performance websites <br className="u__show-after-992" /> crafted using the latest and innovative technologies.`,
   button = {

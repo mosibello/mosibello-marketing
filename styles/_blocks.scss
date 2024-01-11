@@ -114,6 +114,15 @@
   &__hero {
   }
   &__feature {
+    &__two-column-content-with-image {
+      &__image-wrapper {
+        img {
+          @media (max-width: 768px) {
+            position: static !important;
+          }
+        }
+      }
+    }
   }
   &__cta {
   }

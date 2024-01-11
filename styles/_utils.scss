@@ -34,6 +34,12 @@
     &-25 {
       border-radius: 25px;
     }
+    &-28 {
+      border-radius: 28px;
+    }
+    &-30 {
+      border-radius: 30px;
+    }
   }
   // ## End border radius
 
@@ -137,7 +143,7 @@
   }
   &__heading-color {
     &--primary {
-      color: var(--t-heading-color-primary);
+      color: var(--t-primary-heading-color);
     }
   }
   &__body-color {
@@ -146,6 +152,9 @@
   &__branding-color {
     &--primary {
       color: var(--t-primary-branding-color);
+    }
+    &--secondary {
+      color: var(--t-secondary-branding-color);
     }
   }
   &__anchor-color {
@@ -469,22 +478,22 @@
   // ## Solids/backgrounds
   &__bg {
     &-primary {
-      background-color: var(--t-primary-branding-color);
+      background-color: var(--t-primary-branding-color) !important;
+    }
+    &-secondary {
+      background-color: var(--t-secondary-branding-color) !important;
     }
     &-white {
-      background-color: var(--t-cp-base-white);
+      background-color: var(--t-cp-base-white) !important;
     }
     &-gray-50 {
-      background-color: var(--t-cp-base-gray-50);
+      background-color: var(--t-cp-base-gray-50) !important;
     }
     &-gray-100 {
-      background-color: var(--t-cp-base-gray-100);
+      background-color: var(--t-cp-base-gray-100) !important;
     }
     &-blue-25 {
-      background-color: var(--t-cp-base-background-blue-25);
-    }
-    &-purple-100 {
-      background-color: #efe9ff;
+      background-color: var(--t-cp-base-background-blue-25) !important;
     }
   }
   // ## End solids/backgrounds

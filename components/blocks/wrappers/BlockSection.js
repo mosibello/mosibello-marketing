@@ -5,7 +5,6 @@ const BlockSection = ({
   // Settings
   borderTop,
   borderBottom,
-  backgroundColor,
   backgroundHex,
   paddingTop,
   paddingBottom,
