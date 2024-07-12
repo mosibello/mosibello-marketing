@@ -1,0 +1,120 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Future-proof your website"
+			},
+			"description": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "We specialize in modern web technologies. <br className=\"u__show-after-992\" /> Companies hire us to consult, design, and develop websites."
+			},
+			"content": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Unlock meaningful growth and create more customer connections with HubSpot's Top Partner, through tailored services in revenue operations, integrations, CRM strategy, demand generation, and web."
+			},
+			"button_title": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Get Started"
+			},
+			"button_destination": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
+			},
+			"scoped_css": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "padding: 64px 0;\nbackground-color: #fff;\nborder: none;"
+			},
+			"enable_blobs": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			}
+		},
+		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "variation01",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Future-proof your website"
+			},
+			"content": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Unlock meaningful growth and create more customer connections with HubSpot's Top Partner, through tailored services in revenue operations, integrations, CRM strategy, demand generation, and web."
+			},
+			"button_destination": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
+			},
+			"image": {
+				"url": "https://images.unsplash.com/photo-1511688878353-3a2f5be94cd7?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwzfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjA3MzI3NDV8MA&ixlib=rb-4.0.3&q=85",
+				"alt": "assorted sliced citrus fruits on brown wooden chopping board",
+				"origin": {
+					"id": "1CsaVdwfIew",
+					"url": "https://images.unsplash.com/photo-1511688878353-3a2f5be94cd7?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwzfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjA3MzI3NDV8MA&ixlib=rb-4.0.3&q=85",
+					"width": 3709,
+					"height": 5563
+				},
+				"width": 3709,
+				"height": 5563,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"button_title": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Get Started"
+			},
+			"scoped_css": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "padding: 64px 0;\nbackground-color: #fff;\nborder: none;"
+			},
+			"label": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Create the Future with AI and Tech"
+			},
+			"align_items_center": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"enable_blobs": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]
