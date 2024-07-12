@@ -5,7 +5,6 @@ import Bounded from "@/components/wrappers/Bounded";
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText } from "@prismicio/react";
 import styled from "styled-components";
-import BlurryBlob from "@/components/modules/BlurryBlob";
 
 const Wrapper = styled.div`
   .b__feature__default {
@@ -65,7 +64,7 @@ const FeatureDefault = ({ slice }) => {
             )}
             {slice.primary.heading && (
               <div className="c__heading-wrapper mb-4">
-                <h2 className="c__heading u__h1">
+                <h2 className="c__heading u__h2">
                   {parse(slice.primary.heading)}
                 </h2>
               </div>
@@ -96,6 +95,7 @@ const FeatureDefault = ({ slice }) => {
                       field={slice.primary.image}
                       blurDataURL={`${slice.primary.image.url.split("?")[0]}?w=10&h=10`}
                       fill={true}
+                      alt={slice.primary.image.alt}
                     />
                   </figure>
                 </div>

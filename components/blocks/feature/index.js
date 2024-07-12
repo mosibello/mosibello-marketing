@@ -1,3 +1,4 @@
 import FeatureDefault from "./FeatureDefault";
+import FeatureVariation01 from "./FeatureVariation01";
 
-export { FeatureDefault };
+export { FeatureDefault, FeatureVariation01 };

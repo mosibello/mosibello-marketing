@@ -85,6 +85,128 @@
         }
       },
       "items": {}
+    },
+    {
+      "id": "variation01",
+      "name": "Variation01",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "scoped_css": {
+          "type": "Text",
+          "config": {
+            "label": "Scoped CSS",
+            "placeholder": ""
+          }
+        },
+        "label": {
+          "type": "Text",
+          "config": {
+            "label": "Label",
+            "placeholder": ""
+          }
+        },
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          }
+        },
+        "cards": {
+          "type": "Group",
+          "config": {
+            "label": "Cards",
+            "repeat": true,
+            "fields": {
+              "icon": {
+                "type": "Image",
+                "config": {
+                  "label": "Icon",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Heading",
+                  "placeholder": ""
+                }
+              },
+              "description": {
+                "type": "Text",
+                "config": {
+                  "label": "Description",
+                  "placeholder": ""
+                }
+              },
+              "button_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Title",
+                  "placeholder": ""
+                }
+              },
+              "button_destination": {
+                "type": "Link",
+                "config": {
+                  "label": "Button Destination",
+                  "placeholder": "",
+                  "select": null
+                }
+              }
+            }
+          }
+        },
+        "card_style": {
+          "type": "Select",
+          "config": {
+            "label": "Card Style",
+            "placeholder": "",
+            "options": [
+              "outlined",
+              "solid",
+              "shadow"
+            ],
+            "default_value": "outlined"
+          }
+        },
+        "justify_content": {
+          "type": "Select",
+          "config": {
+            "label": "Justify Content",
+            "placeholder": "",
+            "options": [
+              "start",
+              "center"
+            ],
+            "default_value": "start"
+          }
+        },
+        "card_columns": {
+          "type": "Select",
+          "config": {
+            "label": "Card Columns",
+            "placeholder": "",
+            "options": [
+              "2",
+              "3",
+              "4"
+            ]
+          }
+        }
+      },
+      "items": {}
     }
   ]
 }

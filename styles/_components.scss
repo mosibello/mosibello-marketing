@@ -2,9 +2,7 @@
   &__button {
     padding: var(--t-button-padding);
     border-radius: var(--t-button-border-radius);
-    // transition: 0.2s ease;
     &:hover {
-      // transition: 0.2s ease;
     }
     &__size {
       &--default {
@@ -59,6 +57,34 @@
         &:hover {
           background: var(--t-secondary-branding-hover-color);
           color: var(--t-cp-base-white);
+        }
+      }
+    }
+    &--link {
+      background-color: transparent;
+      border: none;
+      color: var(--t-anchor-color);
+      padding: 0;
+      .c {
+        &__button {
+          &__content {
+            font-weight: 600 !important;
+          }
+        }
+      }
+      &:hover {
+        color: var(--t-anchor-hover-color);
+        .c {
+          &__button__content {
+            text-decoration: underline;
+            text-underline-offset: 6px;
+            text-decoration-thickness: 1px;
+          }
+        }
+        svg {
+          path {
+            stroke: var(--t-anchor-hover-color);
+          }
         }
       }
     }
@@ -202,33 +228,6 @@
         opacity: 0;
         pointer-events: none;
         display: none;
-      }
-    }
-  }
-  &__icon-card {
-    padding: 1.5rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    border-radius: 8px;
-    &--with-border {
-      border: 2px solid var(--t-primary-branding-color);
-    }
-    &__wrapper {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-    &__icon-wrapper {
-      margin-bottom: 3rem;
-      svg {
-        width: 42px;
-        height: 42px;
-      }
-      img {
-        object-fit: contain;
-        width: 100px;
-        height: 42px;
       }
     }
   }

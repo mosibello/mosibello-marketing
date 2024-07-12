@@ -137,6 +137,61 @@ export type SettingsDocument<Lang extends string = string> =
 export type AllDocumentTypes = HomepageDocument | SettingsDocument;
 
 /**
+ * Item in *Feature → Variation01 → Primary → Cards*
+ */
+export interface FeatureSliceVariation01PrimaryCardsItem {
+  /**
+   * Icon field in *Feature → Variation01 → Primary → Cards*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: feature.variation01.primary.cards[].icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  icon: prismic.ImageField<never>;
+
+  /**
+   * Heading field in *Feature → Variation01 → Primary → Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: feature.variation01.primary.cards[].heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Description field in *Feature → Variation01 → Primary → Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: feature.variation01.primary.cards[].description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * Button Title field in *Feature → Variation01 → Primary → Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: feature.variation01.primary.cards[].button_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_title: prismic.KeyTextField;
+
+  /**
+   * Button Destination field in *Feature → Variation01 → Primary → Cards*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: feature.variation01.primary.cards[].button_destination
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_destination: prismic.LinkField;
+}
+
+/**
  * Primary content in *Feature → Default → Primary*
  */
 export interface FeatureSliceDefaultPrimary {
@@ -247,9 +302,109 @@ export type FeatureSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *Feature → Variation01 → Primary*
+ */
+export interface FeatureSliceVariation01Primary {
+  /**
+   * Scoped CSS field in *Feature → Variation01 → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: feature.variation01.primary.scoped_css
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  scoped_css: prismic.KeyTextField;
+
+  /**
+   * Label field in *Feature → Variation01 → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: feature.variation01.primary.label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Heading field in *Feature → Variation01 → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: feature.variation01.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Description field in *Feature → Variation01 → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: feature.variation01.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * Cards field in *Feature → Variation01 → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: feature.variation01.primary.cards[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  cards: prismic.GroupField<Simplify<FeatureSliceVariation01PrimaryCardsItem>>;
+
+  /**
+   * Card Style field in *Feature → Variation01 → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: outlined
+   * - **API ID Path**: feature.variation01.primary.card_style
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  card_style: prismic.SelectField<"outlined" | "solid" | "shadow", "filled">;
+
+  /**
+   * Justify Content field in *Feature → Variation01 → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: start
+   * - **API ID Path**: feature.variation01.primary.justify_content
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  justify_content: prismic.SelectField<"start" | "center", "filled">;
+
+  /**
+   * Card Columns field in *Feature → Variation01 → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: feature.variation01.primary.card_columns
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  card_columns: prismic.SelectField<"2" | "3" | "4">;
+}
+
+/**
+ * Variation01 variation for Feature Slice
+ *
+ * - **API ID**: `variation01`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FeatureSliceVariation01 = prismic.SharedSliceVariation<
+  "variation01",
+  Simplify<FeatureSliceVariation01Primary>,
+  never
+>;
+
+/**
  * Slice variation for *Feature*
  */
-type FeatureSliceVariation = FeatureSliceDefault;
+type FeatureSliceVariation = FeatureSliceDefault | FeatureSliceVariation01;
 
 /**
  * Feature Shared Slice
@@ -494,8 +649,11 @@ declare module "@prismicio/client" {
       AllDocumentTypes,
       FeatureSlice,
       FeatureSliceDefaultPrimary,
+      FeatureSliceVariation01PrimaryCardsItem,
+      FeatureSliceVariation01Primary,
       FeatureSliceVariation,
       FeatureSliceDefault,
+      FeatureSliceVariation01,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation01Primary,

@@ -74,14 +74,14 @@ const HeroVariation01 = ({ slice }) => {
             )}
             {slice.primary.heading && (
               <div className="c__heading-wrapper mb-4">
-                <h1 className="c__heading u__d1">
+                <h1 className="c__heading u__d2">
                   {parse(slice.primary.heading)}
                 </h1>
               </div>
             )}
             {slice.primary.content && (
               <div className="c__description-wrapper">
-                <p className="c__description u__h5">
+                <p className="c__description u__h6">
                   {parse(slice.primary.content)}
                 </p>
               </div>
@@ -105,6 +105,7 @@ const HeroVariation01 = ({ slice }) => {
                       field={slice.primary.image}
                       blurDataURL={`${slice.primary.image.url.split("?")[0]}?w=10&h=10`}
                       fill={true}
+                      alt={slice.primary.image.alt}
                     />
                   </figure>
                 </div>

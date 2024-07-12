@@ -162,21 +162,24 @@
     }
   }
   &__h1 {
-    font-size: 40px;
+    font-size: 50px;
   }
   &__h2 {
-    font-size: 32px;
+    font-size: 40px;
   }
   &__h3 {
-    font-size: 28px;
+    font-size: 32px;
   }
   &__h4 {
-    font-size: 24px;
+    font-size: 28px;
   }
   &__h5 {
-    font-size: 20px;
+    font-size: 24px;
   }
   &__h6 {
+    font-size: 20px;
+  }
+  &__subtitle {
     font-size: 18px;
   }
   &__p {
@@ -184,9 +187,6 @@
   }
   &__small {
     font-size: 14px;
-  }
-  &__subtitle {
-    font-size: 18px;
   }
   &__inherited-anchor {
     color: inherit;
@@ -396,6 +396,14 @@
     }
   }
   // ## End Transitions and cursors
+
+  // ## Backgrounds
+  &__background {
+    &-light {
+      background-color: var(--t-light-background-color);
+    }
+  }
+  // ## End Backgrounds
 
   // ## Misc
   &__height-fit-to-screen {
