@@ -25,14 +25,14 @@ const HeroDefault = ({ slice }) => {
         <div className="text-center">
           {slice.primary.heading && (
             <div className="c__heading-wrapper mb-4">
-              <h1 className="c__heading u__d1 u__f-900">
+              <h1 className="c__heading u__d1">
                 {parse(slice.primary.heading)}
               </h1>
             </div>
           )}
           {slice.primary.description && (
             <div className="c__subtitle-wrapper mb-4">
-              <h2 className="c__heading u__h4 u__f-700  mb-2">
+              <h2 className="c__heading u__h5 u__f-700  mb-2">
                 {parse(slice.primary.description)}
               </h2>
             </div>
@@ -42,7 +42,7 @@ const HeroDefault = ({ slice }) => {
               className="c__description-wrapper mx-auto"
               style={{ maxWidth: 900 }}
             >
-              <p className="c__description u__h6">
+              <p className="c__description u__subtitle">
                 {parse(slice.primary.content)}
               </p>
             </div>

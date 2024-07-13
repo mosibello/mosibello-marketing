@@ -19,6 +19,7 @@ const Theme = css`
     --t-body-line-height: 1.6;
     --t-font-family-heading: "Inter", sans-serif;
     --t-font-family-body: "Inter", sans-serif;
+    --t-font-weight-heading: 700;
     // Form
     --t-form-title-color: var(--t-primary-branding-color);
     --t-form-label-color: #25282a;

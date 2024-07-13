@@ -77,7 +77,7 @@ const Header = () => {
                     })}
                   </ul>
                   <Button
-                    className="text-center"
+                    className="text-center mt-3 w-100"
                     title={`Get a Free Quote`}
                     destination={`/contact`}
                   />

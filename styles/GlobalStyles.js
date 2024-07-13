@@ -52,7 +52,7 @@ const Styles = css`
   .h5,
   .h6 {
     color: var(--t-heading-color);
-    font-weight: 700;
+    font-weight: var(--t-font-weight-heading);
     font-family: var(--t-font-family-heading);
   }
 
