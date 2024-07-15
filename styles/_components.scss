@@ -2,7 +2,8 @@
   &__button {
     padding: var(--t-button-padding);
     border-radius: var(--t-button-border-radius);
-    &:hover {
+    &__content {
+      font-weight: var(--t-font-weight-button);
     }
     &__size {
       &--default {
@@ -277,21 +278,6 @@
           }
         }
       }
-    }
-  }
-  &__ripple {
-    position: absolute;
-    &--top-left {
-      top: -31rem;
-      left: -49rem;
-    }
-    &--bottom-right {
-      bottom: -31rem;
-      right: -49rem;
-    }
-    &--bottom-left {
-      bottom: -31rem;
-      left: -49rem;
     }
   }
   &__testimonial-banner {

@@ -3,12 +3,17 @@ import parse from "html-react-parser";
 import Bounded from "@/components/wrappers/Bounded";
 import styled from "styled-components";
 import BlurryBlob from "@/components/modules/BlurryBlob";
-import IconCard from "@/components/modules/IconCard";
+import IconListItem from "@/components/modules/IconListItem";
+import CardWithSpotlightHeading from "@/components/modules/CardWithSpotlightHeading";
 
 const Wrapper = styled.div`
-  .b__feature__variation01 {
-    &__row {
-      --bs-gutter-y: 1.5rem;
+  .b__feature__variation03 {
+    &__grid-row {
+      --bs-gutter-x: 2rem;
+      --bs-gutter-y: 3rem;
+      @media (min-width: 1200px) {
+        --bs-gutter-x: 10.3rem;
+      }
     }
   }
 `;
@@ -16,15 +21,14 @@ const Wrapper = styled.div`
 const cardColumns = {
   2: "col-lg-6",
   3: "col-lg-4",
-  4: "col-lg-3",
 };
 
-const FeatureVariation01 = ({ slice }) => {
+const FeatureVariation03 = ({ slice }) => {
   return (
     <Bounded
       type={slice?.slice_type}
       variation={slice?.variation}
-      className="b__feature__variation01 overflow-hidden position-relative"
+      className="b__feature__variation03 overflow-hidden position-relative"
       scopedCss={slice?.primary.scoped_css}
     >
       <Wrapper>
@@ -45,30 +49,18 @@ const FeatureVariation01 = ({ slice }) => {
           </div>
         </div>
         {slice.primary.cards && (
-          <div className="container position-relatie u__z-index-1 mt-4 pt-4">
-            <div
-              className={`row b__feature__variation01__row justify-content-${slice.primary.justify_content}`}
-            >
+          <div className="container mt-4 pt-4">
+            <div className="row b__feature__variation03__grid-row">
               {slice.primary.cards.map((elem, index) => {
-                const {
-                  icon,
-                  heading,
-                  description,
-                  button_title,
-                  button_destination,
-                } = elem;
+                const { heading, description } = elem;
                 return (
                   <div
                     key={index}
                     className={`col-md-6 ${slice.primary.card_columns ? cardColumns[slice.primary.card_columns] : `col-lg-4`}`}
                   >
-                    <IconCard
-                      style={slice.primary?.card_style}
-                      icon={icon}
+                    <CardWithSpotlightHeading
                       heading={heading}
                       description={description}
-                      buttonTitle={button_title}
-                      buttonDestination={button_destination}
                     />
                   </div>
                 );
@@ -81,4 +73,4 @@ const FeatureVariation01 = ({ slice }) => {
   );
 };
 
-export default FeatureVariation01;
+export default FeatureVariation03;

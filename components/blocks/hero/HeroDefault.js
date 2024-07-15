@@ -32,7 +32,7 @@ const HeroDefault = ({ slice }) => {
           )}
           {slice.primary.description && (
             <div className="c__subtitle-wrapper mb-4">
-              <h2 className="c__heading u__h5 u__f-700  mb-2">
+              <h2 className="c__heading u__h5  mb-2">
                 {parse(slice.primary.description)}
               </h2>
             </div>

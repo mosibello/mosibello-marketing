@@ -20,7 +20,7 @@ const Button = ({
               className ? className : ``
             } c__button__size--${size}`}
           >
-            <div className="c__button__content u__f-700">
+            <div className="c__button__content">
               <span>{title}</span>
             </div>
           </span>

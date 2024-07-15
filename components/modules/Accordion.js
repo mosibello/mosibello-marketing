@@ -4,7 +4,7 @@ import styled from "styled-components";
 import parse from "html-react-parser";
 import { PrismicRichText } from "@prismicio/react";
 
-const Module = styled.div`
+const Component = styled.div`
   border-bottom: none;
   margin-bottom: 1.25rem;
   &:last-child {
@@ -76,7 +76,7 @@ const Accordion = ({ index, heading, content, borderBottom = true }) => {
   };
 
   return (
-    <Module
+    <Component
       className={`c__accordion ${borderBottom ? `c__accordion--border-bottom` : ``} ${expanded ? `c__accordion--active` : ``}`}
     >
       <div
@@ -92,7 +92,7 @@ const Accordion = ({ index, heading, content, borderBottom = true }) => {
       >
         {heading && (
           <div className="c__accordion__heading-wrapper">
-            <h3 className="c__accordion__heading u__h5 u__f-600 mb-0">
+            <h3 className="c__accordion__heading u__h5 mb-0">
               {parse(heading)}
             </h3>
           </div>
@@ -153,7 +153,7 @@ const Accordion = ({ index, heading, content, borderBottom = true }) => {
           </div>
         </div>
       )}
-    </Module>
+    </Component>
   );
 };
 

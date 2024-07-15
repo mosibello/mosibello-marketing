@@ -12,7 +12,7 @@ const BlurryBlob = ({
   opacity = "0.2",
   transform = `scale(1.1)`,
 }) => {
-  const Wrapper = styled.div`
+  const Component = styled.div`
     position: absolute;
     width: 800px;
     height: 800px;
@@ -25,7 +25,7 @@ const BlurryBlob = ({
     transform: ${transform && transform};
   `;
   return (
-    <Wrapper>
+    <Component>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
@@ -67,7 +67,7 @@ const BlurryBlob = ({
           />
         </g>
       </svg>
-    </Wrapper>
+    </Component>
   );
 };
 

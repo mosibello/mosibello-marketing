@@ -1,9 +1,10 @@
 "use client";
 import styled from "styled-components";
+import parse from "html-react-parser";
 import Button from "./Button";
 import { PrismicNextImage } from "@prismicio/next";
 
-const Module = styled.div`
+const Component = styled.div`
   padding: 2rem 1.5rem;
   height: 100%;
   display: flex;
@@ -51,7 +52,7 @@ const IconCard = ({
   buttonStyle = "link",
 }) => {
   return (
-    <Module className={`c__icon-card c__icon-card--${style}`}>
+    <Component className={`c__icon-card c__icon-card--${style}`}>
       <div className="c__icon-card__wrapper">
         {icon && (
           <div className="c__icon-card__icon-wrapper">
@@ -62,12 +63,14 @@ const IconCard = ({
         )}
         {heading && (
           <div className="c__icon-card__heading-wrapper">
-            <h3 className="c__icon-card__heading u__h5">{heading}</h3>
+            <h3 className="c__icon-card__heading u__h5">{parse(heading)}</h3>
           </div>
         )}
         {description && (
           <div className="c__icon-card__description-wrapper mt-2 mb-3">
-            <p className="c__icon-card__description mb-0">{description}</p>
+            <p className="c__icon-card__description mb-0">
+              {parse(description)}
+            </p>
           </div>
         )}
         {buttonTitle && (
@@ -80,7 +83,7 @@ const IconCard = ({
           </div>
         )}
       </div>
-    </Module>
+    </Component>
   );
 };
 
