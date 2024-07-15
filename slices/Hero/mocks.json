@@ -38,6 +38,10 @@
 			"enable_blobs": {
 				"__TYPE__": "BooleanContent",
 				"value": true
+			},
+			"align_left": {
+				"__TYPE__": "BooleanContent",
+				"value": true
 			}
 		},
 		"items": []

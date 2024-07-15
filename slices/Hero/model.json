@@ -64,6 +64,15 @@
             "placeholder_true": "true",
             "placeholder_false": "false"
           }
+        },
+        "align_left": {
+          "type": "Boolean",
+          "config": {
+            "label": "Align Left",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
         }
       },
       "items": {}

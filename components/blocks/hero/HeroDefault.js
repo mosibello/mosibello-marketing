@@ -22,7 +22,9 @@ const HeroDefault = ({ slice }) => {
         </>
       )}
       <div className="container position-relative u__z-index-1">
-        <div className="text-center">
+        <div
+          className={`${slice.primary.align_left ? `text-start` : `text-center`}`}
+        >
           {slice.primary.heading && (
             <div className="c__heading-wrapper mb-4">
               <h1 className="c__heading u__d1">
@@ -39,8 +41,8 @@ const HeroDefault = ({ slice }) => {
           )}
           {slice.primary.content && (
             <div
-              className="c__description-wrapper mx-auto"
-              style={{ maxWidth: 900 }}
+              className={`c__description-wrapper ${slice.primary.align_left ? `` : `mx-auto`}`}
+              style={slice.primary.align_left ? null : { maxWidth: 900 }}
             >
               <p className="c__description u__subtitle">
                 {parse(slice.primary.content)}

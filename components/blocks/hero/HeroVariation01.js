@@ -103,7 +103,7 @@ const HeroVariation01 = ({ slice }) => {
                       className="b__hero__variation01__image"
                       placeholder="blur"
                       field={slice.primary.image}
-                      blurDataURL={`${slice.primary.image.url.split("?")[0]}?w=10&h=10`}
+                      blurDataURL={`${slice.primary.image.url?.split("?")[0]}?w=10&h=10`}
                       fill={true}
                       alt={slice.primary.image.alt}
                     />

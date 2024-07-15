@@ -93,7 +93,7 @@ const FeatureDefault = ({ slice }) => {
                       className="b__feature__default__image"
                       placeholder="blur"
                       field={slice.primary.image}
-                      blurDataURL={`${slice.primary.image.url.split("?")[0]}?w=10&h=10`}
+                      blurDataURL={`${slice.primary.image.url?.split("?")[0]}?w=10&h=10`}
                       fill={true}
                       alt={slice.primary.image.alt}
                     />

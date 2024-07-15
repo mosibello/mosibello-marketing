@@ -29,8 +29,8 @@ export default function RootLayout({ children }) {
         <StyledComponentsRegistry>
           <GlobalStyles />
           <Layout>{children}</Layout>
-          <PrismicPreview repositoryName={repositoryName} />
         </StyledComponentsRegistry>
+        <PrismicPreview repositoryName={repositoryName} />
       </body>
     </html>
   );
