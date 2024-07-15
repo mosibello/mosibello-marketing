@@ -4,7 +4,8 @@ import Layout from "@/components/wrappers/Layout";
 import StyledComponentsRegistry from "@/lib/registry";
 import GlobalStyles from "@/styles/GlobalStyles";
 import { Inter } from "next/font/google";
-import { createClient } from "@/prismicio";
+import { createClient, repositoryName } from "@/prismicio";
+import { PrismicPreview } from "@prismicio/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
         <StyledComponentsRegistry>
           <GlobalStyles />
           <Layout>{children}</Layout>
+          <PrismicPreview repositoryName={repositoryName} />
         </StyledComponentsRegistry>
       </body>
     </html>
