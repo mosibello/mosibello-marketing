@@ -309,27 +309,5 @@
       }
     }
   }
-  &__pill {
-    border-radius: 16px;
-    font-size: 0.8rem;
-    padding: 1px 18px;
-    width: fit-content;
-    &__text {
-      font-size: inherit;
-      line-height: inherit;
-      letter-spacing: inherit;
-      color: inherit;
-      margin: 0;
-      padding: 0;
-    }
-    &--primary {
-      background-color: var(--t-primary-branding-color);
-      color: var(--t-cp-base-white);
-    }
-    &--secondary {
-      background-color: var(--t-secondary-branding-color);
-      color: var(--t-cp-base-white);
-    }
-  }
   // New component styles here
 }

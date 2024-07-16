@@ -5,6 +5,7 @@ import Bounded from "@/components/wrappers/Bounded";
 import { PrismicNextImage } from "@prismicio/next";
 import styled from "styled-components";
 import BlurryBlob from "@/components/modules/BlurryBlob";
+import Pill from "@/components/modules/Pill";
 
 const Wrapper = styled.div`
   .b__hero__variation01 {
@@ -63,15 +64,7 @@ const HeroVariation01 = ({ slice }) => {
           className={`row b__hero__variation01__row ${slice.primary.align_items_center ? "align-items-center" : ``}`}
         >
           <div className="col-lg-6">
-            {slice.primary.label && (
-              <div className="c__pill-wrapper">
-                <div className="c__pill c__pill--primary u__f-700 mb-3">
-                  <span className="c__pill__text u__p">
-                    {parse(slice.primary.label)}
-                  </span>
-                </div>
-              </div>
-            )}
+            {slice.primary.label && <Pill title={slice.primary.label} />}
             {slice.primary.heading && (
               <div className="c__heading-wrapper mb-4">
                 <h1 className="c__heading u__d2">
